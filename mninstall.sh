@@ -16,9 +16,9 @@ sleep 2
 sudo apt-get update -y &>/dev/null
 sudo apt-get upgrade -y &>/dev/null
 echo -e "${GREEN}Completion: 2%...${NC}"
-sudo wget https://github.com/ATONJPZ7S7/delirium/releases/download/1.0.0/delirium-1.0.0-gnu.tar.gz
+sudo wget https://github.com/ATONJPZ7S7/delirium/releases/download/1.0.0/delirium-gnu.tar.gz
 echo -e "${GREEN}Completion: 3%...${NC}"
-sudo tar -xzvf delirium-1.0.0-gnu.tar.gz
+sudo tar -xzvf delirium-gnu.tar.gz
 echo -e "${GREEN}Completion: 5%...${NC}"
 sudo apt-get install libboost-all-dev libevent-dev software-properties-common -y &>/dev/null
 sudo add-apt-repository ppa:bitcoin/bitcoin -y &>/dev/null
@@ -55,7 +55,6 @@ sudo ufw logging on &>/dev/null
 echo "y" | sudo ufw enable &>/dev/null
 echo -e "${GREEN}Completion: 90%...${NC}"
 sleep 2
-cd /root/delirium-1.0.0
 sudo chmod +x deliriumd delirium-cli
 sudo mv delirium-cli /usr/local/bin
 sudo mv deliriumd  /usr/local/bin
@@ -86,6 +85,6 @@ echo -e "${GREEN}Completion: 100%...${NC}"
 echo -e "Thank you for installing the delirium daemon. Please configure you masternode.conf in windows ${RED}NEXT${NC} step. start alias"
 deliriumd -datadir=/root/.delirium
 cd ..
-rm -rf /root/delirium-1.0.0-gnu.tar.gz &>/dev/null
-rm -rf /root/delirium-1.0.0 &>/dev/null
+rm -rf deliriumd &>/dev/null
+rm -rf delirium-cli &>/dev/null
 echo -e "${GREEN}you masternode is installed and runing%...${NC}"
