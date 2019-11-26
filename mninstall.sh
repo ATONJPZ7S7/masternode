@@ -16,9 +16,9 @@ sleep 2
 sudo apt-get update -y &>/dev/null
 sudo apt-get upgrade -y &>/dev/null
 echo -e "${GREEN}Completion: 2%...${NC}"
-sudo wget https://github.com/ATONJPZ7S7/delirium/releases/download/1.0.2.2/daemon-linux-V1.0.2.2.tar.gz
+sudo wget https://github.com/ATONJPZ7S7/delirium/releases/download/1.0.1.2/daemon-linux-1.0.1.2.tar.gz
 echo -e "${GREEN}Completion: 3%...${NC}"
-sudo tar -xzvf delirium-gnu.tar.gz
+sudo tar -xzvf daemon-linux-1.0.1.2.tar.gz
 echo -e "${GREEN}Completion: 5%...${NC}"
 sudo apt-get install libboost-all-dev libevent-dev software-properties-common -y &>/dev/null
 sudo add-apt-repository ppa:bitcoin/bitcoin -y &>/dev/null
